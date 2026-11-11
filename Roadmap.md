@@ -1,133 +1,121 @@
 # Java 25+ Design Patterns – Leerroadmap
 
-> **Doel:** alle 23 klassieke Gang of Four (GoF) design patterns zelfstandig leren herkennen, implementeren, testen en verantwoord toepassen.
->
-> **Studieritme:** maandag t/m vrijdag, ongeveer 10–15 minuten per oefendag (richttijd rond 12:00 uur).
->
-> **Omvang:** 94 geplande oefendagen, ongeveer 19 werkweken; reserveer circa 20 weken met ruimte voor uitloop. Dit is een flexibel plan, geen deadline.
+## Doel
 
-## 1. Uitgangspunten
+Een nieuw, zelfstandig Java-project waarin alle **23 klassieke Gang of Four (GoF) design patterns** per categorie worden geleerd en geoefend. De nadruk ligt op **begrijpen, zelf implementeren, testen, vergelijken en herkennen wanneer een pattern wel of niet passend is**.
 
-- We starten met een **nieuw, zelfstandig Maven-project** en beginnen opnieuw bij Factory Method.
-- De oefeningen zijn **per categorie** georganiseerd: eerst Creational, dan Structural, daarna Behavioral.
-- Elk pattern krijgt **meerdere dagen**. Complexere patterns krijgen meer tijd.
-- De oefeningen gebruiken **Java 25 zonder preview-features**, Maven en waar nuttig JUnit 5 (eventueel Mockito).
-- We gebruiken **geen Spring Boot** als vereiste, zodat de focus op de patterns en objectgeoriënteerd ontwerp blijft.
-- Iedere keer **één kleine, zelfstandig uitvoerbare opdracht**. De oplossing wordt niet vooraf gegeven.
-- Na het insturen van de code volgt een **code review**, uitleg bij denkvragen, gerichte verbeterpunten en waar nuttig een vervolgvariant.
-- We bespreken nadrukkelijk **wanneer een pattern níét nodig is** en vergelijken patterns met vergelijkbare structuren.
-- Als een concept nog niet duidelijk is, voegen we extra oefeningen toe of herhalen we het onderwerp.
+## Uitgangspunten
 
-## 2. Leerdoelen
+- **Java 25**, zonder preview-features.
+- **Maven** voor de build en **JUnit 5** voor tests; Mockito alleen wanneer nuttig.
+- **Maandag t/m vrijdag** standaard één oefening rond **12:00 uur**.
+- Per oefening ongeveer **10–15 minuten**; complexere onderwerpen kunnen meerdere dagen vragen.
+- **Flexibel tempo:** de gebruiker kan **op elk moment om de volgende oefening vragen**, ook wanneer de volgende geplande dag nog niet is aangebroken of dezelfde dag al een oefening is afgerond.
+- De voortgang volgt de **daadwerkelijk afgeronde oefeningen**, niet strikt de kalender. Een vroeg afgeronde oefening hoeft later niet opnieuw te worden aangeboden.
+- **Eén oefening tegelijk**, met leerdoel, startcode, verwachte uitvoer en denkvragen; **geen oplossing vooraf**.
+- Na het insturen: code review, uitleg van verbeterpunten en een kleine vervolgvariant.
+- Eerst beheersing, dan doorgaan. Bij onduidelijkheid wordt een extra oefening toegevoegd.
 
-Na het traject kan ik:
+**Totale basisplanning:** 94 oefendagen, circa **19 werkweken** bij vijf dagen per week; met ruimte voor uitloop **ongeveer 20 weken**. Dit is een richtlijn en geen deadline.
 
-1. Het probleem beschrijven dat ieder pattern oplost.
-2. De belangrijkste rollen, verantwoordelijkheden en relaties uitleggen.
-3. Een pattern zelfstandig in Java implementeren.
-4. De implementatie testen, inclusief relevante randgevallen.
-5. De trade-offs en alternatieven uitleggen.
-6. Zelf beslissen welk pattern bij een gegeven probleem past — of waarom geen pattern nodig is.
+## Vaste leeropbouw per pattern
 
-## 3. Planning in één oogopslag
+1. **Begrijpen:** concreet probleem, doel, rollen en samenwerking van objecten.
+2. **Implementeren:** zelfstandig bouwen vanuit startcode.
+3. **Verdiepen:** uitbreiding, edge cases, foutafhandeling of tests.
+4. **Toepassen:** eigen ontwerpkeuzes maken in een praktijksituatie.
+5. **Vergelijken:** alternatieven, trade-offs en wanneer het pattern overbodig is.
 
-| Fase | Onderwerp | Patterns | Oefendagen | Indicatieve duur |
-|---|---|---:|---:|---|
-| 1 | Creational | 5 | 17 | 3–4 weken |
-| 2 | Structural | 7 | 26 | 5–6 weken |
-| 3 | Behavioral | 11 | 46 | 9–10 weken |
-| 4 | Integratie-eindproject | Gecombineerd | 5 | 1 week |
-| **Totaal** | | **23** | **94** | **circa 20 weken** |
+Eenvoudige patterns krijgen minder oefendagen dan complexe. Niet iedere fase hoeft bij ieder pattern een afzonderlijke dag te zijn.
 
-### Fase 1 – Creational Patterns (oefendagen 1–17)
+## Fase 1 – Creational Patterns (17 oefendagen)
 
-**Centrale vraag:** hoe maken we objecten gecontroleerd, flexibel en zonder onnodige koppeling aan concrete implementaties?
+*Hoofdvraag: hoe worden objecten aangemaakt en samengesteld?*
 
-| Dagen | Pattern / onderdeel | Duur | Inhoud |
-|---|---|---:|---|
-| 1–3 | Factory Method | 3 | Objectcreatie scheiden van verwerking; subklassen kiezen concrete producten; testen en vergelijken |
-| 4–7 | Abstract Factory | 4 | Families van gerelateerde objecten; nieuwe families toevoegen; vergelijking met Factory Method en Builder |
-| 8–10 | Builder | 3 | Stapsgewijs construeren; verplichte/optionele velden; defaults, validatie en immutability |
-| 11–12 | Prototype | 2 | Objecten kopiëren; shallow versus deep copy; mutabele velden |
-| 13–14 | Singleton | 2 | Scope, lazy/eager initialisatie, thread safety, nadelen voor testbaarheid |
-| 15–17 | Categorie-eindopdracht | 3 | Zonder patternhint requirements analyseren, oplossing implementeren en ontwerpkeuze verdedigen |
+| Pattern / opdracht | Dagen | Leerdoelen |
+|---|---:|---|
+| Factory Method | 3 | Objectcreatie van verwerkingslogica scheiden; subklassen kiezen concrete producten |
+| Abstract Factory | 4 | Families van samenhangende producten maken en uitbreiden |
+| Builder | 3 | Fluent API, immutable objecten, defaults en validatie |
+| Prototype | 2 | Kopiëren, shallow copy en deep copy |
+| Singleton | 2 | Unieke instantie per scope, thread safety, testbaarheid en alternatieven |
+| Categorie-eindopdracht | 3 | Zelf een passend creational pattern kiezen en onderbouwen |
+| **Totaal** | **17** | |
 
-**Resultaat:** zelfstandig het juiste creational pattern kunnen kiezen.
+**Voorbeeld Abstract Factory (4 dagen):** probleem verkennen en vergelijken met Factory Method; factory en producten implementeren; een tweede productfamilie toevoegen; tests en vergelijking met alternatieven.
 
-### Fase 2 – Structural Patterns (oefendagen 18–43)
+## Fase 2 – Structural Patterns (26 oefendagen)
 
-**Centrale vraag:** hoe laten we objecten samenwerken, organiseren en uitbreiden zonder sterke afhankelijkheden?
+*Hoofdvraag: hoe laat je objecten samenwerken en hoe voeg je structuur of gedrag toe?*
 
-| Dagen | Pattern / onderdeel | Duur | Inhoud |
-|---|---|---:|---|
-| 18–20 | Adapter | 3 | Externe interfaces vertalen; gegevens transformeren; integratietests |
-| 21–24 | Bridge | 4 | Abstractie en implementatie loskoppelen; onafhankelijke varianten uitbreiden |
-| 25–28 | Composite | 4 | Boomstructuren, recursie, bladeren en samengestelde objecten |
-| 29–31 | Decorator | 3 | Logging, timing en andere wrappers; stapelvolgorde en foutafhandeling |
-| 32–33 | Facade | 2 | Complexe subsystemen via een eenvoudiger toegangspunt gebruiken |
-| 34–37 | Flyweight | 4 | Intrinsieke/extrinsieke toestand; objectdeling; geheugenoverwegingen |
-| 38–40 | Proxy | 3 | Lazy loading, toegangscontrole en caching; verschil met Decorator |
-| 41–43 | Categorie-eindopdracht | 3 | Structural patterns herkennen, combineren en verdedigen |
+| Pattern / opdracht | Dagen | Leerdoelen |
+|---|---:|---|
+| Adapter | 3 | Interfaces vertalen en externe clients integreren |
+| Bridge | 4 | Abstractie en implementatie onafhankelijk laten variëren |
+| Composite | 4 | Boomstructuren, recursie en uniforme operaties |
+| Decorator | 3 | Gedrag combineren, zoals logging en timing |
+| Facade | 2 | Een eenvoudige ingang voor een complex subsysteem bieden |
+| Flyweight | 4 | Gedeelde toestand en geheugenefficiëntie begrijpen |
+| Proxy | 3 | Toegang, lazy loading en caching afhandelen |
+| Categorie-eindopdracht | 3 | Structural patterns vergelijken en combineren |
+| **Totaal** | **26** | |
 
-**Resultaat:** onder andere Adapter, Decorator en Proxy op basis van hun **doel** uit elkaar kunnen houden, ook als hun code op elkaar lijkt.
+**Extra aandacht:** Adapter, Decorator en Proxy kunnen vergelijkbare composition-code gebruiken, maar lossen verschillende problemen op.
 
-### Fase 3 – Behavioral Patterns (oefendagen 44–89)
+## Fase 3 – Behavioral Patterns (46 oefendagen)
 
-**Centrale vraag:** hoe verdelen objecten gedrag, beslissingen en communicatie?
+*Hoofdvraag: hoe verdelen objecten gedrag, acties en communicatie?*
 
-| Dagen | Pattern / onderdeel | Duur | Inhoud |
-|---|---|---:|---|
-| 44–46 | Strategy | 3 | Uitwisselbare algoritmen, selectie en testbaarheid |
-| 47–50 | Observer | 4 | Registreren/afmelden, events, notificatiegedrag, wijzigingen tijdens iteratie |
-| 51–54 | Command | 4 | Acties als objecten, wachtrijen, undo en ontvangers |
-| 55–59 | State | 5 | Toestandafhankelijk gedrag, overgangen, tests, vergelijking met enum en Strategy |
-| 60–62 | Template Method | 3 | Algoritmeskelet en variabele stappen; verschil met Strategy |
-| 63–66 | Chain of Responsibility | 4 | Handlerketens, stop-/doorgaanregels, foutscenario's |
-| 67–68 | Iterator | 2 | Collecties doorlopen zonder interne details vrij te geven |
-| 69–72 | Mediator | 4 | Interacties tussen objecten centraliseren en koppeling reduceren |
-| 73–75 | Memento | 3 | Snapshotten en herstellen van toestand; encapsulation |
-| 76–80 | Visitor | 5 | Nieuwe operaties op objectstructuren, double dispatch, trade-offs |
-| 81–85 | Interpreter | 5 | Eenvoudige grammatica, expressies en evaluatie |
-| 86–89 | Categorie-eindopdracht | 4 | Behavioral patterns kiezen, combineren, testen en vergelijken |
+| Pattern / opdracht | Dagen | Leerdoelen |
+|---|---:|---|
+| Strategy | 3 | Algoritmen uitwisselbaar maken |
+| Observer | 4 | Observers beheren, events en veilige notificatie |
+| Command | 4 | Opdrachten als objecten, queue en undo |
+| State | 5 | Toestandafhankelijk gedrag en geldige transities |
+| Template Method | 3 | Vaste algoritmestructuur en variabele stappen |
+| Chain of Responsibility | 4 | Verzoeken door een keten van handlers sturen |
+| Iterator | 2 | Collecties doorlopen zonder interne details bloot te leggen |
+| Mediator | 4 | Communicatie tussen samenwerkende objecten centraliseren |
+| Memento | 3 | Toestand opslaan en herstellen |
+| Visitor | 5 | Nieuwe bewerkingen toevoegen aan objectstructuren |
+| Interpreter | 5 | Een kleine grammatica en expressies interpreteren |
+| Categorie-eindopdracht | 4 | Verschillende behavioral patterns zelfstandig toepassen |
+| **Totaal** | **46** | |
 
-**Resultaat:** herkennen wanneer gedrag via bijvoorbeeld Strategy, Observer, Command of State moet worden gemodelleerd.
+**Voorbeeld State (5 dagen):** lange conditionele logica onderzoeken; state-interface en concrete states bouwen; transities en foutgevallen; unit tests; vergelijken met Strategy en een eenvoudige enum.
 
-### Fase 4 – Integratie-eindproject (oefendagen 90–94)
+## Fase 4 – Integratie en eindproject (5 oefendagen)
 
-We bouwen een kleine **dienstverzoekenapplicatie** als oefencontext, zonder vooraf te vertellen welke patterns vereist zijn.
+Een kleine **dienstverzoekenapplicatie** waarin patterns uit meerdere categorieën gecombineerd worden. Het juiste pattern wordt niet vooraf voorgeschreven.
 
-| Dag | Opdracht |
+| Dag van deze fase | Opdracht |
 |---|---|
-| 90 | Requirements analyseren en geschikte patterns selecteren |
-| 91 | Objectcreatie en domeinstructuur implementeren |
-| 92 | Gedrag, toestandsovergangen en notificaties implementeren |
-| 93 | Unit tests, randgevallen en refactoring |
-| 94 | Architectuurreview en ontwerpkeuzes beargumenteren |
+| 1 (globaal dag 90) | Requirements analyseren en patterns kiezen |
+| 2 (dag 91) | Objectcreatie en domeinstructuur implementeren |
+| 3 (dag 92) | Gedrag, statusovergangen en notificaties implementeren |
+| 4 (dag 93) | Tests schrijven en ontwerp verbeteren |
+| 5 (dag 94) | Refactoring, review en ontwerpkeuzes onderbouwen |
 
-## 4. Aanpak per pattern
+## Voortgangsoverzicht
 
-Een pattern doorloopt doorgaans deze stappen, verdeeld over twee tot vijf dagen afhankelijk van de moeilijkheid:
+| Fase | Oefendagen |
+|---|---:|
+| Creational | 17 |
+| Structural | 26 |
+| Behavioral | 46 |
+| Eindproject | 5 |
+| **Totaal** | **94** |
 
-1. **Begrijpen:** welk concreet probleem lossen we op? Wat gaat er mis met een naïeve oplossing?
-2. **Implementeren:** zelf de kernrollen en samenwerking bouwen op basis van startcode.
-3. **Verdiepen:** een wijziging in requirements, extra variant, randgeval of test toevoegen.
-4. **Toepassen:** het pattern in een realistischer situatie gebruiken.
-5. **Vergelijken:** alternatieven, beperkingen, SOLID-principes en overengineering bespreken.
+Een pattern is goed beheerst wanneer je:
 
-Niet iedere stap hoeft een aparte dag te zijn. Bij relatief eenvoudige patterns combineren we stappen.
+- [ ] het probleem kunt uitleggen dat het pattern oplost;
+- [ ] de rollen en verantwoordelijkheden herkent;
+- [ ] het zelfstandig kunt implementeren;
+- [ ] de werking kunt testen;
+- [ ] voor- en nadelen kunt benoemen;
+- [ ] weet wanneer je het pattern beter niet inzet.
 
-### Vast format voor een dagelijkse oefening
-
-- **Titel, categorie, pattern en oefendag**
-- **Leerdoel** en korte probleemomschrijving
-- **Startcode** met package en duidelijke TODO's
-- **Opdracht en acceptatiecriteria**
-- **Verwachte uitvoer** en/of testgedrag
-- **Twee of drie denkvragen**
-- **Geen volledige oplossing vooraf**
-- **Review na inzending:** wat klopt, wat ontbreekt, waarom, en een kleine vervolgvariant
-
-## 5. Voorgestelde projectstructuur
+## Voorstel voor projectstructuur
 
 ```text
 java-design-patterns/
@@ -166,38 +154,20 @@ java-design-patterns/
         └── behavioral/
 ```
 
-De mappen voor een pattern worden aangevuld wanneer we dat pattern bereiken. Een vervolgdag mag voortbouwen op bestaande code; een nieuw package is niet verplicht als dat geen leerwaarde heeft.
+De dagen van een pattern mogen voortbouwen op eerdere dagen. Je hoeft niet iedere dag een volledig nieuwe applicatie te maken.
 
-## 6. Criteria voor afronding van een pattern
+## Werkwijze bij dagelijkse en vervroegde oefeningen
 
-Een pattern is pas *voldoende beheerst* wanneer ik:
+- Op werkdagen is **12:00 uur** het gewenste standaardmoment.
+- De volgende oefening mag **altijd eerder op verzoek** worden gegeven, ongeacht datum of tijd.
+- Bij een verzoek als *‘Geef mij de volgende oefening’* wordt de **eerstvolgende nog niet afgeronde oefening** aangeboden.
+- Bij het insturen van code volgt eerst een review met gerichte verbeterpunten.
+- De gebruiker kan ervoor kiezen direct verder te gaan of nog een verdieping te doen.
+- De kalenderplanning schuift mee met de feitelijke voortgang; afgeronde oefeningen worden niet opnieuw als nieuwe opdracht ingepland.
+- Een geplande dagelijkse taak moet bij daadwerkelijke ingebruikname op deze roadmap worden afgestemd; dit document wijzigt bestaande automatiseringen niet.
 
-- [ ] Het probleem kan uitleggen waarvoor het pattern bedoeld is.
-- [ ] De rollen en verantwoordelijkheden kan benoemen.
-- [ ] Zonder volledige voorbeeldoplossing een werkende Java-implementatie kan maken.
-- [ ] De kern en relevante foutgevallen kan testen.
-- [ ] De voordelen, nadelen en trade-offs kan uitleggen.
-- [ ] Weet wanneer een eenvoudige oplossing beter is dan het pattern.
+## Voorgestelde start
 
-De categorie-eindopdrachten testen vooral het **zelfstandig herkennen en kiezen** van een pattern.
+**Maandag 16 november 2026:** Creational → Factory Method → Dag 1. Eerder starten is mogelijk op verzoek.
 
-## 7. Voortgang bijhouden
-
-| Onderdeel | Gepland | Afgerond |
-|---|---:|---:|
-| Creational | 17 | 0 |
-| Structural | 26 | 0 |
-| Behavioral | 46 | 0 |
-| Integratie-eindproject | 5 | 0 |
-| **Totaal** | **94** | **0** |
-
-Werk deze tabel na iedere afgeronde oefening bij. Eventueel kunnen we per pattern in het README-bestand noteren welke inzichten, valkuilen en testcases belangrijk waren.
-
-## 8. Start en planning aanpassen
-
-- **Voorgestelde start:** maandag 16 november 2026, met **Factory Method – dag 1**.
-- **Frequentie:** één oefening op werkdagen, bij voorkeur om 12:00 uur.
-- **Flexibiliteit:** uitloop en extra verdieping hebben voorrang op het oorspronkelijke dagnummer.
-- **Bestaande oefenreeks:** blijft gescheiden van dit nieuwe project; een bestaande dagelijkse herinnering of taak wordt niet automatisch door dit document aangepast.
-
-**Leidraad:** eerst begrijpen, daarna implementeren, vervolgens toepassen en pas dan doorgaan.
+> Leidraad: begrip gaat vóór tempo; één oefening tegelijk, zonder vooraf de volledige oplossing te tonen.
