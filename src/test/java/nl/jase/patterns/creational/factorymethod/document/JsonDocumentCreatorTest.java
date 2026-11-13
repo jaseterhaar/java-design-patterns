@@ -8,11 +8,9 @@ class JsonDocumentCreatorTest {
 
     @Test
     void shouldReturnCorrectContent() {
-        String content = "Mijn document";
         DocumentCreator jsonCreator= new JsonDocumentCreator();
-        Document document = jsonCreator.createDocument();
 
-        String export = document.export(content);
+        String export = jsonCreator.exportDocument("Mijn document");
 
         assertEquals("{\"content\":\"Mijn document\"}", export);
     }
