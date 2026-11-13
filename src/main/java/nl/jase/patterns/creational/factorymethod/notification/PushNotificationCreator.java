@@ -1,4 +1,4 @@
-package nl.jase.patterns.creational.factorymethod;
+package nl.jase.patterns.creational.factorymethod.notification;
 
 public class PushNotificationCreator extends NotificationCreator {
     @Override

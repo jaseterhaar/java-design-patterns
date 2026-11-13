@@ -1,4 +1,4 @@
-package nl.jase.patterns.creational.factorymethod;
+package nl.jase.patterns.creational.factorymethod.notification;
 
 import org.junit.jupiter.api.Test;
 
