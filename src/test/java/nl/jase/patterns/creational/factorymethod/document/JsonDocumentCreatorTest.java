@@ -7,10 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class JsonDocumentCreatorTest {
 
     @Test
-    void shouldCreateJsonDocument() {
+    void shouldReturnCorrectContent() {
+        String content = "Mijn document";
         DocumentCreator jsonCreator= new JsonDocumentCreator();
         Document document = jsonCreator.createDocument();
 
-        assertInstanceOf(JsonDocument.class, document);
+        String export = document.export(content);
+
+        assertEquals("{\"content\":\"Mijn document\"}", export);
     }
 }
