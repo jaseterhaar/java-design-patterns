@@ -9,5 +9,7 @@ public class Main {
         emailCreator.notifyUser(message);
         NotificationCreator smsCreator = new SmsNotificationCreator();
         smsCreator.notifyUser(message);
+        NotificationCreator pushCreator = new PushNotificationCreator();
+        pushCreator.notifyUser(message);
     }
 }
