@@ -12,7 +12,7 @@ class BankPaymentCreatorTest {
     @Test
     void shouldCreateCorrectPayment() {
         var amount = new BigDecimal("49.95");
-        var payment = new BankPaymentCreator().createPayment().pay(amount);
+        var payment = new BankPaymentCreator().processPayment(amount);
 
         assertEquals("Bankoverschrijving: € 49.95", payment);
     }
