@@ -13,7 +13,7 @@ class PickupShippingCreatorTest {
         ShippingCreator shippingCreator = new PickupShippingCreator();
         BigDecimal costs = shippingCreator.createShipping().getCost();
 
-        assertEquals(new BigDecimal("0.0"), costs);
+        assertEquals(new BigDecimal("0.00"), costs);
     }
 
 }

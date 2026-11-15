@@ -19,6 +19,18 @@ public class ShippingCreatorTest {
         assertFalse(shippingCreator.createShippingCalled);
     }
 
+    @Test
+    void shouldRejectNullOrderId() {
+        TestShippingCreator creator = new TestShippingCreator();
+
+        assertThrows(
+            IllegalArgumentException.class,
+            () -> creator.processShipping(null)
+        );
+
+        assertFalse(creator.createShippingCalled);
+    }
+
     private static class TestShippingCreator extends ShippingCreator {
 
         private boolean createShippingCalled = false;

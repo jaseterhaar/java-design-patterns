@@ -13,7 +13,7 @@ class ExpressShippingCreatorTest {
         ExpressShippingCreator creator = new ExpressShippingCreator();
         BigDecimal costs = creator.createShipping().getCost();
 
-        assertEquals(new BigDecimal("12.5"), costs);
+        assertEquals(new BigDecimal("12.50"), costs);
     }
 
 }

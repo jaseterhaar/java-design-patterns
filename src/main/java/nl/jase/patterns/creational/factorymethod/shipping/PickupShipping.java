@@ -11,6 +11,6 @@ public class PickupShipping implements Shipping {
 
     @Override
     public BigDecimal getCost() {
-        return BigDecimal.valueOf(0.00);
+        return new BigDecimal("0.00");
     }
 }

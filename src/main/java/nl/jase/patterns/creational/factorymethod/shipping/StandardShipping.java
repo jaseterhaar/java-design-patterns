@@ -11,6 +11,6 @@ public class StandardShipping implements Shipping {
 
     @Override
     public BigDecimal getCost() {
-        return BigDecimal.valueOf(4.95);
+        return new BigDecimal("4.95");
     }
 }

@@ -11,6 +11,6 @@ public class ExpressShipping implements Shipping {
 
     @Override
     public BigDecimal getCost() {
-        return BigDecimal.valueOf(12.50);
+        return new BigDecimal("12.50");
     }
 }
