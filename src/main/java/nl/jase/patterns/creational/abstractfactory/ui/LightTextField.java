@@ -1,0 +1,8 @@
+package nl.jase.patterns.creational.abstractfactory.ui;
+
+public class LightTextField implements TextField {
+    @Override
+    public void render() {
+        System.out.println("Rendering Light TextField");
+    }
+}

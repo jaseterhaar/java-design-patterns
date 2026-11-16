@@ -12,4 +12,9 @@ public class DarkUIFactory implements UIFactory {
     public Checkbox createCheckbox() {
         return new DarkCheckbox();
     }
+
+    @Override
+    public TextField createTextField() {
+        return new DarkTextField();
+    }
 }

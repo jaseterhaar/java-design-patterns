@@ -12,4 +12,9 @@ public class LightUIFactory implements UIFactory {
     public Checkbox createCheckbox() {
         return new LightCheckbox();
     }
+
+    @Override
+    public TextField createTextField() {
+        return new LightTextField();
+    }
 }
