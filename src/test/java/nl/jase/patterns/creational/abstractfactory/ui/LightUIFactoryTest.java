@@ -3,7 +3,7 @@ package nl.jase.patterns.creational.abstractfactory.ui;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
 class LightUIFactoryTest {
 
