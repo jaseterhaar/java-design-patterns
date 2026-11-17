@@ -11,5 +11,9 @@ public class Main {
         UIFactory darkUIFactory = new DarkUIFactory();
         Application darkApp = new Application(darkUIFactory);
         darkApp.render();
+
+        UIFactory blueUIFactory = new BlueUIFactory();
+        Application blueApp = new Application(blueUIFactory);
+        blueApp.render();
     }
 }
