@@ -20,7 +20,7 @@ public class CloudApplicationTest {
         assertEquals(
             List.of(
                 "upload: report.pdf",
-                "notify: report.pdf"
+                "notify: Uploaded report.pdf"
             ),
             events
         );
