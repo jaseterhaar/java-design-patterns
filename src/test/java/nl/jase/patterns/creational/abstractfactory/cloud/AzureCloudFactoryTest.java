@@ -9,7 +9,7 @@ class AzureCloudFactoryTest {
     private final CloudFactory factory = new AzureCloudFactory();
 
     @Test
-    void shouldCreateAwsProducts() {
+    void shouldCreateAzureProducts() {
         Storage storage = factory.createStorage();
         Notification notification = factory.createNotification();
 

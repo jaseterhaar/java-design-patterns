@@ -30,7 +30,7 @@ public class CloudApplicationTest {
     @Test
     void shouldNotNotifyWhenUploadFails() {
         List<String> events = new ArrayList<>();
-        CloudApplication application = getApplication(events);
+        CloudApplication application = createApplicationWithFailingStorage(events);
 
         IllegalStateException exception = assertThrows(
             IllegalStateException.class,
@@ -41,7 +41,7 @@ public class CloudApplicationTest {
         assertEquals(List.of("upload:report.pdf"), events);
     }
 
-    private CloudApplication getApplication(List<String> events) {
+    private CloudApplication createApplicationWithFailingStorage(List<String> events) {
         CloudFactory factory = new CloudFactory() {
 
             @Override

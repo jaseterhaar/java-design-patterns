@@ -12,6 +12,6 @@ public class CloudApplication {
 
     public void uploadFile(String filename) {
         storage.upload(filename);
-        notification.send(filename);
+        notification.send("Uploaded " + filename);
     }
 }
